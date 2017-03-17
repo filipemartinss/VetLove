@@ -1,21 +1,28 @@
 package model;
 
-public class client {
+public class Client {
 
 	private String nome;
 	private String morada;
 	private String email;
 	private String telemovel;
+	private ArrayList<Animal> animais;
+	int id;
 	
 	
-	public client(String nome, String morada, String email, String telemovel) {
+	public Client(int id) {
+		super();
+		this.id = id;
+	}
+
+	public Client(String nome, String morada, String email, String telemovel) {
 		super();
 		this.nome = nome;
 		this.morada = morada;
 		this.email = email;
 		this.telemovel = telemovel;
+		animais = new ArrayList<>();
 	}
-
 
 	public String getNome() {
 		return nome;
@@ -57,8 +64,24 @@ public class client {
 	}
 
 
-	public client() {
+	public Client() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public ArrayList<Animal> getAnimais() {
+		return animais;
+	}
+
+	public void setAnimais(ArrayList<Animal> animais) {
+		this.animais = animais;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
